@@ -14,9 +14,9 @@ submit.addEventListener('submit', (e) => {
 
 
     Email.send({
-        SecureToken: "609bc9f4-a55a-4656-a521-60c868c01656",
-        To: "jangadafest@gmail.com",
-        From: "jangadafest@gmail.com",
+        SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+        To: "jangadafestival@gmail.com",
+        From: "jangadafestival@gmail.com",
         Subject: "This is the subject",
         Body: textBody
     }).then(
