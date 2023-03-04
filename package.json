@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/styled-components": "^5.1.26",
+    "dotenv-safe": "^8.2.0",
+    "scss": "^0.2.4",
+    "styled-components": "^5.3.8"
+  }
+}
