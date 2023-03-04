@@ -1,6 +1,6 @@
 const nome = document.getElementById('nome')
 const email = document.getElementById('email')
-const submit = document.getElementById('submit')
+const submit = document.getElementsByClassName('submit')[0]
 
 submit.addEventListener('submit', (e) => {
     e.preventDefault()
