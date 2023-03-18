@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$cor1: white;
+$cor2: black;
+$cor3: #EE8BB0;
+$cor4: #DBDD48;
+$mobile: 768px;
+$fonte1: 'Bebas Neue', cursive;
+$fonte2:'Open Sans', sans-serif;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $cor2;
+}
+
+.intro{
+    height: 100vh;
+    background:  url("imagens/Fundo_01.png"), url("imagens/IMG_PB.png");
+    background-size: cover;
+    background-position-x: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .img-desktop{
+        margin-top: -80px;
+        height: 150px;
+        display:block;
+    }
+    .img-mobile{
+        display: none;
+        width: 100px;
+    }
+    span{
+        background-color: $cor1;
+        border-radius: 99999px;
+        padding: 20px 60px;
+        h4{
+            text-align: center;
+            font-family: $fonte1;
+            margin-bottom: 0;
+        }
+        @media (max-width: $mobile) {
+            padding: 20px 20px;
+            margin: 0 10px;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .img-desktop{
+            margin-top: -40px;
+            height: 170px;
+            width: 300px;
+            display: none;
+        }
+        .img-mobile{
+            display: block;
+        }
+    }
+}
+
+.sobre-nos{
+    height: 100vh;
+    display: flex;
+    .pessoas, .texto-sobre{
+        width: 50%;
+    }
+    .pessoas{
+        object-fit: cover;
+    }
+    .texto-sobre{
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div{
+            padding: 40px;
+            img{
+                width: 200px;
+                padding-bottom: 40px;
+            }
+            p{
+                font-family: $fonte1;
+                font-size: larger;
+                color: $cor1;
+                a{
+                    color: $cor3;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        height: auto;
+        .pessoas, .texto-sobre{
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+}
+
+.tocar-evento{
+    display: flex;
+    flex-direction: row;
+    .tocar-evento-texto, .vetor-pessoas{
+        width: 50%;
+    }
+    .tocar-evento-texto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:end;
+        img{
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        p{
+            width: 400px;
+            padding-right: 100px;
+            line-height: 1.5rem;
+            font-family: $fonte1;
+            color: $cor1;
+            font-size: 1.3rem;
+        }
+    }
+    .vetor-pessoas{
+        margin-top: -100px;
+    }
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        height: auto;
+        .tocar-evento-texto, .vetor-pessoas{
+            width: 100%;
+        }
+        .tocar-evento-texto{
+            img, p{
+                width: 300px;
+            }
+            margin-bottom: 40px;
+        }
+        .vetor-pessoas{
+            margin: 0;
+        }
+    }
+    
+}
+
+.form-desktop, .form-mobile{
+    .card, form{
+        background-color: $cor2;
+        color: $cor1;
+    }
+    .inputs-inline{
+        display: flex;
+        flex-direction: row;
+
+    
+    }
+    .enviar{
+        font-family: $fonte2;
+        margin: 10px 0;
+        background-color: $cor3;
+        outline: none;
+        border: none;
+        padding-left:50px;
+        padding-right: 50px;
+        font-family: $fonte1;
+        letter-spacing: 0.1rem;
+        font-size: large;
+    }
+    .regulamento{
+        font-size: small;
+        color: $cor1;
+        a{
+            color: $cor1;
+            text-decoration: none;
+        }
+    }
+    
+}
+
+.form-desktop{
+    padding: 0 90px;
+}
+
+.form-mobile{
+    padding: 0 20px;
+    display: none;
+}
+
+@media (max-width: $mobile){
+    .form-mobile{
+        display:flex;
+       
+    }
+    .form-desktop{
+        display: none;
+    }
+}
+
+.pulseira{
+    background-color: $cor4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    img{
+       width: 500px;
+    }
+
+    @media (max-width: $mobile){
+        img{
+            width: 380px;
+        }
+     }
+}
+
+.expor-marca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    img, p {
+        width: 500px;
+     }
+     p{
+        margin-top: 25px;
+        width: 500px;
+        text-align: center;
+        color: $cor1;
+        font-family: $fonte1;
+        font-size: 1.2rem;
+        a{
+            color: $cor3;
+            text-decoration: none;
+        }
+     }
+
+     @media (max-width: $mobile){
+        img,p{
+            width: 300px;
+        }
+     }
+}
+
+.apoia-se{
+    display: flex;
+    background-color: $cor1;
+    padding: 40px 100px;
+    justify-content: center;
+    column-gap: 60px;
+    align-items:center;
+    font-size: larger;
+
+    a{
+        color: $cor2;
+        text-decoration: none;
+    }
+
+    .logo-jangada{
+        width: 125px;
+    }
+
+    & > div{
+        align-self: flex-end;
+        font-family: $fonte1;
+
+        & > div{
+            p{
+                margin-bottom: 0;
+            }
+            margin-top: 16px;
+
+            &:nth-of-type(3){
+                font-family: $fonte2;
+                font-size: small;
+            }
+        }
+
+        .logo-insta{
+            width: 30px;
+        }
+    }
+
+    .apoia-se-img{
+        max-width: 200px;
+    }
+    
+    @media(max-width: $mobile){
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
