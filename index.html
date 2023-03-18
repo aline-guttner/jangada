@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
@@ -16,23 +17,157 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="intro">
+        <img class="img-desktop"src="imagens/JANGADA_TOPO.png" alt="logo do festival jangada">
+        <img class="img-mobile "src="imagens/LOGO_ESCURO.png" alt="logo do festival jangada">
+        <span>
+            <h4>Lutamos pelo desenvolvimento da arte autoral e independente no interior</h4>
+        </span>
+    </div>
+    <div class="sobre-nos">
+        <img src="imagens/IMG_02.png" class="pessoas" alt="pessoas ao redor de uma mesa de artesanato">
+        <div class="texto-sobre">
+            <div>
+                <img src="imagens/SOBRE-NOS.png" alt="sobre nós">
+                <p>O Jangada Festival é um evento
+                    cultural sinérgico que une artistas
+                    independentes da cidade de Itatiba e
+                    região, em um ambiente de
+                    celebração da arte e cultura.
+                    inscreva você ou sua banda para
+                    tocar no nosso evento cultural!
+                    
+                    <p>QUER SABER MAIS? <a href="https://drive.google.com/file/d/1mLtiXB30JhDHxb5_KF8dHXoFRuCzaVAf/view">CLICK AQUI</a></p></p>
+            </div>
+        </div>
+    </div>
+    <div class="tocar-evento">
+        <div class="tocar-evento-texto">
+            <img src="imagens/TOCAR_NO_EVENTO.png" alt="Quer tocar no nosso evento?">
+            <p>inscreva você ou sua banda para tocar no nosso evento cultural!</p>
+        </div>
+        <img class="vetor-pessoas" src="imagens/VETOR_PESSOAS.png" alt="desenho rosa de pessoas">
+    </div>
+    <div class="container mt-5 form-desktop">
+        <!-- <img src="jangada-logo.jpg" class="logo" alt=""> -->
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Formulário de contato</h4>
                 <form action="#" class="form-contact">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" name="name" id="name" class="form-control">
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="name" class="form-label">Nome da banda</label>
+                            <input type="text" name="name" id="name" class="form-control">
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" id="email" class="form-control">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label class="form-label" for="integrantes">Nome dos integrantes e respectivos instrumentos</label>
+                            <textarea name="integrantes" id="integrantes" class="form-control" cols="50" rows="8"></textarea>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Estilo musical</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Whatsapp para contato</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+                        </div>
                     </div>
-                    <input class="btn btn-success" type="submit" value="Enviar" id="submit">
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="email" class="form-label">Link do Google Drive</label>
+                            <input type="email" name="email" id="email" class="form-control">
+                        </div>
+                    </div>
+                    <input class="btn btn-success enviar" type="submit" value="Enviar" id="submit">
+                    <p class="regulamento">*confira o <a href=""><b>regulamento aqui </b></a> e/ou pelo e-mail</p>
                 </form>
             </div>
         </div>
+    </div>
+    <div class="container mt-5 form-mobile">
+        <!-- <img src="jangada-logo.jpg" class="logo" alt=""> -->
+        <div class="card">
+            <div class="card-body">
+                <form action="#" class="form-contact">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome da banda</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="integrantes">Nome dos integrantes e respectivos instrumentos</label>
+                        <textarea name="integrantes" id="integrantes" class="form-control" cols="50" rows="8"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Estilo musical</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Whatsapp para contato</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="email" class="form-label">Link do Google Drive</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <input class="btn btn-success enviar" type="submit" value="Enviar" id="submit">
+                    <p class="regulamento">*confira o <a href=""><b>regulamento aqui </b></a> e/ou pelo e-mail</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="pulseira">
+        <img src="imagens/GARANTA_A_PULSEIRA.png" alt="Garanta sua pulseira agora mesmo!">
+    </div>
+    <div class="expor-marca">
+        <img src="imagens/EXPOR_MARCA.png" alt="Quer expor sua marca no evento?">
+        <p>São mais de 200 pessoas vendo sua marca em evidência.
+            <br>
+            Temos 3 melhores opções que cabem no seu bolso para
+            <br>
+            expor no nosso evento.
+            <br>
+            <a href="https://drive.google.com/file/d/1IvTc_3FzwstULjHLKazcWOcX4e-AgkG-/view">CONFIRA AQUI!</a>
+        </p>
+    </div>
+    <div class="patrocinador"></div>
+    <div class="apoia-se">
+        <img src="imagens/LOGO_ESCURO.png" class="logo-jangada" alt="Logo do jangada festival">
+        <div>
+            <div>
+                <a href="">Sobre nós</a>
+                <br>
+                <a href="">Cadastrar sua banda</a>
+                <br>
+                <a href="">Regulamento geral</a>
+                <br>
+                <a href="https://drive.google.com/file/d/1IvTc_3FzwstULjHLKazcWOcX4e-AgkG-/view">Patrocinar</a>
+            </div>
+            <div class="contato">
+                <p>
+                    <img src="imagens/Instagram-Logo-PNG-Pic.png" class="logo-insta" alt="Logo do Instagram">
+                    jangada.festival
+                </p>
+                <p>jangada.festival@gmail.com</p>
+            </div>
+            <div>
+                <p>
+                Todos os direitos reservados, Jangada Festival, 2023.
+                <br>
+                <b>Desenvolvido por <b>Lelly e Aline.</b></p>
+            </div>
+        </div>
+        <img src="imagens/APOIA-SE.png" class="apoia-se-img img-fluid" alt="Apoia-se">
     </div>
     <script src="./index.js"></script>
 </body>
