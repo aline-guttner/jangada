@@ -6,6 +6,7 @@ $cor2: black;
 $cor3: #EE8BB0;
 $cor4: #DBDD48;
 $mobile: 768px;
+$desktop_xsm: 980px;
 $fonte1: 'Bebas Neue', cursive;
 $fonte2:'Open Sans', sans-serif;
 
@@ -152,7 +153,18 @@ body{
     
 }
 
-.form-desktop, .form-mobile{
+.form-desktop{
+    padding: 0 90px;
+    @media (max-width: $desktop_xsm){
+        padding: 0 30px;
+    }
+    @media (max-width: $mobile){
+        padding: 0 15px;
+        .one-row-mobile{
+            flex-direction: column;
+        }
+    }
+
     .card, form{
         background-color: $cor2;
         color: $cor1;
@@ -186,24 +198,10 @@ body{
     
 }
 
-.form-desktop{
-    padding: 0 90px;
-}
-
-.form-mobile{
-    padding: 0 20px;
-    display: none;
-}
-
-@media (max-width: $mobile){
-    .form-mobile{
-        display:flex;
-       
-    }
-    .form-desktop{
-        display: none;
-    }
-}
+// .form-mobile{
+//     padding: 0 20px;
+//     display: none;
+// }
 
 .pulseira{
     background-color: $cor4;
