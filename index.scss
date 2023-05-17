@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face{
+    font-family: 'Bebas Neue Regular';
+    src: url('fonts/BebasNeueRegular.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Return of the Gunfighter';
+    src: url('fonts/Return-of-the-Gunfighter.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Bebas Neue Light';
+    src: url('fonts/BebasNeueLight.woff') format('woff');
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 $cor1: white;
@@ -7,8 +22,10 @@ $cor3: #EE8BB0;
 $cor4: #DBDD48;
 $mobile: 768px;
 $desktop_xsm: 980px;
-$fonte1: 'Bebas Neue', cursive;
-$fonte2:'Open Sans', sans-serif;
+$fonte1:'Bebas Neue Regular', sans-serif;
+$fonte2:'Return of the Gunfighter', sans-serif;
+$fonte3: 'Bebas Neue Light', sans-serif;
+$fontetitulos: 70px;
 
 *{
     box-sizing: border-box;
@@ -19,49 +36,58 @@ body{
 }
 
 .intro{
-    height: 100vh;
-    background:  url("imagens/Fundo_01.png"), url("imagens/IMG_PB.png");
-    background-size: cover;
-    background-position-x: 20%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    .img-desktop{
-        margin-top: -80px;
-        height: 150px;
-        display:block;
-    }
-    .img-mobile{
-        display: none;
-        width: 100px;
+    padding: 40px;
+    .logo-titulo{
+        display: flex;
+        font-family: $fonte2;
+        color: $cor1;
+        align-items: center;
+        column-gap: 20px;
+        h1{
+            line-height: .8;
+            font-size: $fontetitulos;
+        }
+        .img-desktop{
+            height: 150px;
+            display:block;
+        }
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
     }
     span{
-        background-color: $cor1;
-        border-radius: 99999px;
-        padding: 20px 60px;
+        padding: 20px 20px;
+        margin: 0 10px;
+        h4{
+            font-size: XX-large;
+            font-family: $fonte1;
+        }
+        :nth-child(1){
+            color: $cor1;
+        }
+        :nth-child(2){
+            color: $cor2;
+            background-color: $cor3;
+            padding: 0 10px;
+        }
+        
         h4{
             text-align: center;
             font-family: $fonte1;
             margin-bottom: 0;
         }
-        @media (max-width: $mobile) {
-            padding: 20px 20px;
-            margin: 0 10px;
-        }
     }
+    
+}
 
-    @media (max-width: $mobile) {
-        .img-desktop{
-            margin-top: -40px;
-            height: 170px;
-            width: 300px;
-            display: none;
-        }
-        .img-mobile{
-            display: block;
-        }
-    }
+.imagem-fundo-01{
+    width: 100%;
 }
 
 .sobre-nos{
@@ -81,16 +107,18 @@ body{
         align-items: center;
         div{
             padding: 40px;
-            img{
-                width: 200px;
-                padding-bottom: 40px;
+            h1{
+                font-family: $fonte2;
+                font-size: $fontetitulos;
+                color: $cor1;
             }
             p{
                 font-family: $fonte1;
                 font-size: larger;
                 color: $cor1;
+                line-height: 1.1;
                 a{
-                    color: $cor3;
+                    color: $cor4;
                     text-decoration: none;
                 }
             }
@@ -104,120 +132,91 @@ body{
             height: 100vh;
         }
     }
+}
 
+.vetor-pessoas{
+    width: 45%;
+    margin-top: -70px;
+    margin-bottom: -270px;
+    z-index: 2;
+    position: relative;
+    margin-left: 55%;
+    @media (max-width: $mobile){
+          margin: 0;
+          width: 100%;
+        }
 }
 
 .tocar-evento{
     display: flex;
-    flex-direction: row;
-    .tocar-evento-texto, .vetor-pessoas{
-        width: 50%;
-    }
-    .tocar-evento-texto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:end;
-        img{
-            width: 400px;
-            margin-bottom: 20px;
-        }
-        p{
-            width: 400px;
-            padding-right: 100px;
-            line-height: 1.5rem;
-            font-family: $fonte1;
-            color: $cor1;
-            font-size: 1.3rem;
-        }
-    }
-    .vetor-pessoas{
-        margin-top: -100px;
-    }
-    @media (max-width: $mobile) {
-        flex-direction: column;
-        height: auto;
-        .tocar-evento-texto, .vetor-pessoas{
-            width: 100%;
-        }
-        .tocar-evento-texto{
-            img, p{
-                width: 300px;
-            }
-            margin-bottom: 40px;
-        }
-        .vetor-pessoas{
-            margin: 0;
-        }
-    }
-    
-}
-
-.form-desktop{
-    padding: 0 90px;
-    @media (max-width: $desktop_xsm){
-        padding: 0 30px;
-    }
+    flex-direction: column;
+    margin: 0 4rem;
     @media (max-width: $mobile){
-        padding: 0 15px;
-        .one-row-mobile{
-            flex-direction: column;
-        }
-    }
-
-    .card, form{
-        background-color: $cor2;
-        color: $cor1;
-    }
-    .inputs-inline{
-        display: flex;
-        flex-direction: row;
-
-    
-    }
-    .enviar{
-        font-family: $fonte2;
-        margin: 10px 0;
-        background-color: $cor3;
-        outline: none;
-        border: none;
-        padding-left:50px;
-        padding-right: 50px;
-        font-family: $fonte1;
-        letter-spacing: 0.1rem;
-        font-size: large;
-    }
-    .regulamento{
-        font-size: small;
-        color: $cor1;
-        a{
-            color: $cor1;
-            text-decoration: none;
-        }
-    }
-    
-}
-
-// .form-mobile{
-//     padding: 0 20px;
-//     display: none;
-// }
-
-.pulseira{
-    background-color: $cor4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 0;
-    img{
-       width: 500px;
-    }
-
-    @media (max-width: $mobile){
-        img{
-            width: 380px;
-        }
+        margin: 0;
      }
+     
+    #form-inscricao{
+        background-color: $cor1;
+        padding: 50px;
+
+        @media (max-width: $mobile){
+            margin-top: 0!important;
+        }
+
+        .header-form{
+            h1{
+                font-family: $fonte2;
+                font-size: $fontetitulos;
+                color: $cor2;
+                line-height: 0.9;
+            }
+            p{
+                line-height: 1.2;
+                font-family: $fonte1;
+                font-size: 1.3rem;
+            }
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .card-body{
+            padding: 0;
+        }
+
+        .card{
+            border: none!important;
+            outline: none!important;
+        }     
+        
+        input, textarea{
+            border-radius: 0;
+            border: $cor2 solid 1px;
+        }
+
+        form{
+           
+            @media (max-width: $mobile){
+                            .one-row-mobile{
+                                flex-direction: column;
+                            }
+            }
+
+            .enviar{
+                            font-family: $fonte2;
+                            margin: 10px 0;
+                            background-color: $cor3;
+                            outline: none;
+                            border: none;
+                            padding-left:50px;
+                            padding-right: 50px;
+                            font-family: $fonte1;
+                            letter-spacing: 0.1rem;
+                            font-size: large;
+                           
+            }
+        }
+    }
 }
 
 .expor-marca{
@@ -226,6 +225,8 @@ body{
     align-items: center;
     justify-content: center;
     padding: 100px 0;
+    
+
     img, p {
         width: 500px;
      }
@@ -247,6 +248,10 @@ body{
             width: 300px;
         }
      }
+}
+
+.imagem-fundo-01-1{
+    width: 100%;
 }
 
 .apoia-se{
@@ -298,3 +303,41 @@ body{
     }
 }
 
+.imagens-jangada{
+    padding: 0;
+}
+
+@media (max-width: 500px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+  }
+  
+  .carousel-inner .carousel-item.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    display: flex;
+  }
+  
+  /* medium and up screens */
+  @media (min-width: 500px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+  }
+  

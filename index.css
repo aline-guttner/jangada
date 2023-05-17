@@ -1,5 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url("fonts/BebasNeueRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Return of the Gunfighter";
+  src: url("fonts/Return-of-the-Gunfighter.woff") format("woff");
+}
+@font-face {
+  font-family: "Bebas Neue Light";
+  src: url("fonts/BebasNeueLight.woff") format("woff");
+}
 * {
   box-sizing: border-box;
 }
@@ -9,50 +20,58 @@ body {
 }
 
 .intro {
-  height: 100vh;
-  background: url("imagens/Fundo_01.png"), url("imagens/IMG_PB.png");
-  background-size: cover;
-  background-position-x: 20%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: 40px;
 }
-.intro .img-desktop {
-  margin-top: -80px;
+.intro .logo-titulo {
+  display: flex;
+  font-family: "Return of the Gunfighter", sans-serif;
+  color: white;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.intro .logo-titulo h1 {
+  line-height: 0.8;
+  font-size: 70px;
+}
+.intro .logo-titulo .img-desktop {
   height: 150px;
   display: block;
 }
-.intro .img-mobile {
-  display: none;
-  width: 100px;
+@media (max-width: 768px) {
+  .intro .logo-titulo {
+    flex-direction: column;
+  }
 }
 .intro span {
-  background-color: white;
-  border-radius: 99999px;
-  padding: 20px 60px;
+  padding: 20px 20px;
+  margin: 0 10px;
+}
+.intro span h4 {
+  font-size: XX-large;
+  font-family: "Bebas Neue Regular", sans-serif;
+}
+.intro span :nth-child(1) {
+  color: white;
+}
+.intro span :nth-child(2) {
+  color: black;
+  background-color: #EE8BB0;
+  padding: 0 10px;
 }
 .intro span h4 {
   text-align: center;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue Regular", sans-serif;
   margin-bottom: 0;
 }
-@media (max-width: 768px) {
-  .intro span {
-    padding: 20px 20px;
-    margin: 0 10px;
-  }
-}
-@media (max-width: 768px) {
-  .intro .img-desktop {
-    margin-top: -40px;
-    height: 170px;
-    width: 300px;
-    display: none;
-  }
-  .intro .img-mobile {
-    display: block;
-  }
+
+.imagem-fundo-01 {
+  width: 100%;
 }
 
 .sobre-nos {
@@ -76,17 +95,19 @@ body {
 .sobre-nos .texto-sobre div {
   padding: 40px;
 }
-.sobre-nos .texto-sobre div img {
-  width: 200px;
-  padding-bottom: 40px;
-}
-.sobre-nos .texto-sobre div p {
-  font-family: "Bebas Neue", cursive;
-  font-size: larger;
+.sobre-nos .texto-sobre div h1 {
+  font-family: "Return of the Gunfighter", sans-serif;
+  font-size: 70px;
   color: white;
 }
+.sobre-nos .texto-sobre div p {
+  font-family: "Bebas Neue Regular", sans-serif;
+  font-size: larger;
+  color: white;
+  line-height: 1.1;
+}
 .sobre-nos .texto-sobre div p a {
-  color: #EE8BB0;
+  color: #DBDD48;
   text-decoration: none;
 }
 @media (max-width: 768px) {
@@ -100,112 +121,83 @@ body {
   }
 }
 
-.tocar-evento {
-  display: flex;
-  flex-direction: row;
-}
-.tocar-evento .tocar-evento-texto, .tocar-evento .vetor-pessoas {
-  width: 50%;
-}
-.tocar-evento .tocar-evento-texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-}
-.tocar-evento .tocar-evento-texto img {
-  width: 400px;
-  margin-bottom: 20px;
-}
-.tocar-evento .tocar-evento-texto p {
-  width: 400px;
-  padding-right: 100px;
-  line-height: 1.5rem;
-  font-family: "Bebas Neue", cursive;
-  color: white;
-  font-size: 1.3rem;
-}
-.tocar-evento .vetor-pessoas {
-  margin-top: -100px;
+.vetor-pessoas {
+  width: 45%;
+  margin-top: -70px;
+  margin-bottom: -270px;
+  z-index: 2;
+  position: relative;
+  margin-left: 55%;
 }
 @media (max-width: 768px) {
-  .tocar-evento {
-    flex-direction: column;
-    height: auto;
-  }
-  .tocar-evento .tocar-evento-texto, .tocar-evento .vetor-pessoas {
-    width: 100%;
-  }
-  .tocar-evento .tocar-evento-texto {
-    margin-bottom: 40px;
-  }
-  .tocar-evento .tocar-evento-texto img, .tocar-evento .tocar-evento-texto p {
-    width: 300px;
-  }
-  .tocar-evento .vetor-pessoas {
+  .vetor-pessoas {
     margin: 0;
+    width: 100%;
   }
 }
 
-.form-desktop {
-  padding: 0 90px;
-}
-@media (max-width: 980px) {
-  .form-desktop {
-    padding: 0 30px;
-  }
+.tocar-evento {
+  display: flex;
+  flex-direction: column;
+  margin: 0 4rem;
 }
 @media (max-width: 768px) {
-  .form-desktop {
-    padding: 0 15px;
+  .tocar-evento {
+    margin: 0;
   }
-  .form-desktop .one-row-mobile {
+}
+.tocar-evento #form-inscricao {
+  background-color: white;
+  padding: 50px;
+}
+@media (max-width: 768px) {
+  .tocar-evento #form-inscricao {
+    margin-top: 0 !important;
+  }
+}
+.tocar-evento #form-inscricao .header-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.tocar-evento #form-inscricao .header-form h1 {
+  font-family: "Return of the Gunfighter", sans-serif;
+  font-size: 70px;
+  color: black;
+  line-height: 0.9;
+}
+.tocar-evento #form-inscricao .header-form p {
+  line-height: 1.2;
+  font-family: "Bebas Neue Regular", sans-serif;
+  font-size: 1.3rem;
+}
+.tocar-evento #form-inscricao .card-body {
+  padding: 0;
+}
+.tocar-evento #form-inscricao .card {
+  border: none !important;
+  outline: none !important;
+}
+.tocar-evento #form-inscricao input, .tocar-evento #form-inscricao textarea {
+  border-radius: 0;
+  border: black solid 1px;
+}
+@media (max-width: 768px) {
+  .tocar-evento #form-inscricao form .one-row-mobile {
     flex-direction: column;
   }
 }
-.form-desktop .card, .form-desktop form {
-  background-color: black;
-  color: white;
-}
-.form-desktop .inputs-inline {
-  display: flex;
-  flex-direction: row;
-}
-.form-desktop .enviar {
-  font-family: "Open Sans", sans-serif;
+.tocar-evento #form-inscricao form .enviar {
+  font-family: "Return of the Gunfighter", sans-serif;
   margin: 10px 0;
   background-color: #EE8BB0;
   outline: none;
   border: none;
   padding-left: 50px;
   padding-right: 50px;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue Regular", sans-serif;
   letter-spacing: 0.1rem;
   font-size: large;
-}
-.form-desktop .regulamento {
-  font-size: small;
-  color: white;
-}
-.form-desktop .regulamento a {
-  color: white;
-  text-decoration: none;
-}
-
-.pulseira {
-  background-color: #DBDD48;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 0;
-}
-.pulseira img {
-  width: 500px;
-}
-@media (max-width: 768px) {
-  .pulseira img {
-    width: 380px;
-  }
 }
 
 .expor-marca {
@@ -223,7 +215,7 @@ body {
   width: 500px;
   text-align: center;
   color: white;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue Regular", sans-serif;
   font-size: 1.2rem;
 }
 .expor-marca p a {
@@ -234,6 +226,10 @@ body {
   .expor-marca img, .expor-marca p {
     width: 300px;
   }
+}
+
+.imagem-fundo-01-1 {
+  width: 100%;
 }
 
 .apoia-se {
@@ -255,7 +251,7 @@ body {
 }
 .apoia-se > div {
   align-self: flex-end;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue Regular", sans-serif;
 }
 .apoia-se > div > div {
   margin-top: 16px;
@@ -264,7 +260,7 @@ body {
   margin-bottom: 0;
 }
 .apoia-se > div > div:nth-of-type(3) {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Return of the Gunfighter", sans-serif;
   font-size: small;
 }
 .apoia-se > div .logo-insta {
@@ -278,4 +274,38 @@ body {
     flex-direction: column;
     row-gap: 50px;
   }
+}
+
+.imagens-jangada {
+  padding: 0;
+}
+
+@media (max-width: 500px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 500px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
 }/*# sourceMappingURL=index.css.map */

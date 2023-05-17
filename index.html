@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
@@ -18,17 +18,23 @@
 
 <body>
     <div class="intro">
-        <img class="img-desktop"src="imagens/JANGADA_TOPO.png" alt="logo do festival jangada">
-        <img class="img-mobile "src="imagens/LOGO_ESCURO.png" alt="logo do festival jangada">
-        <span>
-            <h4>Lutamos pelo desenvolvimento da arte autoral e independente no interior</h4>
-        </span>
+        <div class="logo-titulo">
+            <img class="img-desktop " src="imagens/logo.png" alt="logo do festival jangada">
+            <h1>JANGADA <br> FESTIVAL</h1> 
+        </div>
+            <span>
+                <h4>LUTAMOS PELO DESENVOLVIMENTO DA</h4>
+                <h4>ARTE AUTORAL E IDENPENDENTE NO INTERIOR</h4>
+            </span>
+
+        
     </div>
+    <img src="imagens/Fundo_01.png" class="imagem-fundo-01" alt="linhas coloridas de fundo">
     <div id="sobre-nos" class="sobre-nos">
         <img src="imagens/IMG_02.png" class="pessoas" alt="pessoas ao redor de uma mesa de artesanato">
         <div class="texto-sobre">
             <div>
-                <img src="imagens/SOBRE-NOS.png" alt="sobre nós">
+                <h1>Sobre nós</h1>
                 <p>O Jangada Festival é um evento
                     cultural sinérgico que une artistas
                     independentes da cidade de Itatiba e
@@ -36,65 +42,75 @@
                     celebração da arte e cultura.
                     inscreva você ou sua banda para
                     tocar no nosso evento cultural!
-                    
-                    <p>QUER SABER MAIS? <a href="https://drive.google.com/file/d/1mLtiXB30JhDHxb5_KF8dHXoFRuCzaVAf/view">CLICK AQUI</a></p></p>
+
+                <p>QUER SABER MAIS? <a
+                        href="https://drive.google.com/file/d/1mLtiXB30JhDHxb5_KF8dHXoFRuCzaVAf/view">CLICK AQUI</a></p>
+                </p>
             </div>
         </div>
     </div>
+    <img class="vetor-pessoas" src="imagens/VETOR_PESSOAS.png" alt="desenho rosa de pessoas">
     <div class="tocar-evento">
-        <div class="tocar-evento-texto">
-            <img src="imagens/TOCAR_NO_EVENTO.png" alt="Quer tocar no nosso evento?">
-            <p>inscreva você ou sua banda para tocar no nosso evento cultural!</p>
-        </div>
-        <img class="vetor-pessoas" src="imagens/VETOR_PESSOAS.png" alt="desenho rosa de pessoas">
-    </div>
-    <div id="form-inscricao" class="container mt-5 form-desktop">
-        <!-- <img src="jangada-logo.jpg" class="logo" alt=""> -->
-        <div class="card">
-            <div class="card-body">
-                <form action="#" class="form-contact">
-                    <div class="row">
-                        <div class="mb-3 col">
-                            <label for="name" class="form-label">Nome da banda</label>
-                            <input type="text" name="name" id="name" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row one-row-mobile">
-                        <div class="col mb-3">
-                            <label class="form-label" for="integrantes">Nome dos integrantes e respectivos instrumentos</label>
-                            <textarea name="integrantes" id="integrantes" class="form-control" cols="50" rows="8"></textarea>
-                        </div>
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="estilo" class="form-label">Estilo musical</label>
-                                <input type="text" name="estilo" id="estilo" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="whatsapp" class="form-label">Whatsapp para contato</label>
-                                <input type="text" name="whatsapp" id="whatsapp" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">E-mail</label>
-                                <input type="email" name="email" id="email" class="form-control">
+        
+        <div id="form-inscricao" class="container mt-5 form-desktop">
+            <div class="header-form">
+                    <h1>Quer participar do nosso evento?</h1>
+                    <p>inscreva você ou sua banda para <br> tocar no nosso evento cultural!</p>
+            </div>
+            <!-- <img src="jangada-logo.jpg" class="logo" alt=""> -->
+            <div class="card">
+                <div class="card-body">
+                    <form action="#" class="form-contact">
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="name" class="form-label">Nome do Artista: (nome artístico e nome completo)</label>
+                                <input type="text" name="name" id="name" class="form-control">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="mb-3 col">
-                            <label for="gdrive" class="form-label">Link do Google Drive</label>
-                            <input type="text" name="gdrive" id="gdrive" class="form-control">
+                        <div class="row one-row-mobile">
+                            <div class="col mb-3">
+                                <label class="form-label" for="integrantes">Fale resumidamente sobre sua arte</label>
+                                <textarea name="integrantes" id="integrantes" class="form-control" cols="50"
+                                    rows="12"></textarea>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="estilo" class="form-label">Local onde atua</label>
+                                    <input type="text" name="estilo" id="estilo" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="whatsapp" class="form-label">Rede social (preferência Instagram)</label>
+                                    <input type="text" name="whatsapp" id="whatsapp" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Whatsapp</label>
+                                    <input type="email" name="email" id="email" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" name="email" id="email" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <input class="btn btn-success enviar" type="submit" value="Enviar" id="submit">
-                    <p class="regulamento">*confira o <a href=""><b>regulamento aqui </b></a> e/ou pelo e-mail</p>
-                </form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label for="gdrive" class="form-label">Link do Google Drive - Mande o seu material - foto/links/arquivo de áudio/vídeo</label>
+                                <input type="text" name="gdrive" id="gdrive" class="form-control">
+                            </div>
+                        </div>
+                        <input class="btn btn-success enviar" type="submit" value="Enviar" id="submit">
+                        <p class="regulamento">*confira o <a href=""><b>regulamento aqui </b></a> e/ou pelo e-mail - Por favor, verifique a caixa de spam!</p>
+                    </form>
+
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="pulseira">
-        <img src="imagens/GARANTA_A_PULSEIRA.png" alt="Garanta sua pulseira agora mesmo!">
-    </div>
+
+    <img src="imagens/Fundo_01_1.png" class="imagem-fundo-01-1" alt="linhas coloridas de fundo">
     <div class="expor-marca">
+
         <img src="imagens/EXPOR_MARCA.png" alt="Quer expor sua marca no evento?">
         <p>São mais de 200 pessoas vendo sua marca em evidência.
             <br>
@@ -106,6 +122,53 @@
         </p>
     </div>
     <div class="patrocinador"></div>
+    <div class="container-fluid text-center g-0 imagens-jangada">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide m-0 g-0" data-bs-interval="false">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card border-0">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card border-0">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/500x400/e66?text=2" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card border-0">
+                                <div class="card-img">
+                                    <img src="https://via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent m-0" href="#recipeCarousel" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent m-0" href="#recipeCarousel" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
     <div class="apoia-se">
         <img src="imagens/LOGO_ESCURO.png" class="logo-jangada" alt="Logo do jangada festival">
         <div>
@@ -127,9 +190,10 @@
             </div>
             <div>
                 <p>
-                Todos os direitos reservados, Jangada Festival, 2023.
-                <br>
-                <b>Desenvolvido por <b>Lelly e Aline.</b></p>
+                    Todos os direitos reservados, Jangada Festival, 2023.
+                    <br>
+                    <b>Desenvolvido por <b>Lelly e Aline.</b>
+                </p>
             </div>
         </div>
         <img src="imagens/APOIA-SE.png" class="apoia-se-img img-fluid" alt="Apoia-se">
