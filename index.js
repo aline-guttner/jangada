@@ -1,8 +1,8 @@
-const nome = document.getElementById('name')
-const integrantes = document.getElementById('integrantes')
-const estilo = document.getElementById('estilo')
-const whatsapp = document.getElementById('whatsapp')
-const gdrive = document.getElementById('gdrive')
+const name = document.getElementById('name')
+const art = document.getElementById('art')
+const social = document.getElementById('social')
+const place = document.getElementById('place')
+const drive = document.getElementById('drive')
 const email = document.getElementById('email')
 const submit = document.getElementsByClassName('form-contact')[0]
 
@@ -11,15 +11,15 @@ submit.addEventListener('submit', (e) => {
     console.log(email.value)
 
     const textBody = `
-    <b>Nome: </b> ${nome.value}
+    <b>Nome: </b> ${name.value}
     <br>
-    <b>Integrantes e respectivos instrumentos: </b> ${integrantes.value}
+    <b>Fale resumidamente sobre a sua arte: </b> ${art.value}
     <br>
-    <b>Estilo: </b> ${estilo.value}
+    <b>Local onde atua: </b> ${place.value}
     <br>
-    <b>Whatsapp: </b> ${whatsapp.value}
+    <b>Rede social (preferência Instagram): </b> ${social.value}
     <br>
-    <b>Google Drive: </b> ${gdrive.value}
+    <b>Google Drive: </b> ${drive.value}
     <br>
     <b>Email: </b> ${email.value}
     `

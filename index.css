@@ -45,9 +45,20 @@ h1 {
   height: 150px;
   display: block;
 }
+.intro .img-mobile {
+  height: 250px;
+  margin: 30px;
+  display: none;
+}
 @media (max-width: 768px) {
   .intro {
     flex-direction: column;
+  }
+  .intro .img-desktop {
+    display: none;
+  }
+  .intro .img-mobile {
+    display: block;
   }
 }
 .intro .motto {
@@ -59,7 +70,7 @@ h1 {
 }
 @media (max-width: 768px) {
   .intro .motto h4 {
-    font-size: 35px;
+    font-size: 33px;
   }
 }
 .intro .motto :nth-child(1) {

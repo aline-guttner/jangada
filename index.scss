@@ -66,8 +66,22 @@ h1{
             display:block;
         }
 
+        .img-mobile{
+            height: 250px;
+            margin: 30px;
+            display:none;
+        }
+
         @media (max-width: $mobile) {
             flex-direction: column;
+
+            .img-desktop{
+                display:none;
+            }
+    
+            .img-mobile{
+                display:block;
+            }
         }
     
     .motto{
@@ -76,7 +90,7 @@ h1{
             font-size: 40px;
             font-family: $fonte1;
             @media (max-width: $mobile){
-                font-size: 35px;
+                font-size: 33px;
             }
         }
 
