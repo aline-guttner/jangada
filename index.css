@@ -36,7 +36,7 @@ h1 {
   height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   row-gap: 30px;
   padding: 0 30px;
@@ -50,9 +50,17 @@ h1 {
     flex-direction: column;
   }
 }
+.intro .motto {
+  margin-top: -30px;
+}
 .intro .motto h4 {
-  font-size: XX-large;
+  font-size: 40px;
   font-family: "Bebas Neue Regular", sans-serif;
+}
+@media (max-width: 768px) {
+  .intro .motto h4 {
+    font-size: 35px;
+  }
 }
 .intro .motto :nth-child(1) {
   color: white;
@@ -68,7 +76,6 @@ h1 {
   margin-bottom: 0;
 }
 .intro .novidades {
-  margin-top: 20px;
   display: flex;
   width: 70%;
   height: 50px;
@@ -117,6 +124,12 @@ h1 {
 }
 .sobre-nos .texto-sobre div h1 {
   color: white;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .sobre-nos .texto-sobre div h1 {
+    margin-bottom: 35px;
+  }
 }
 .sobre-nos .texto-sobre div p {
   font-family: "Bebas Neue Regular", sans-serif;
@@ -188,6 +201,12 @@ h1 {
   line-height: 1.2;
   font-family: "Bebas Neue Regular", sans-serif;
   font-size: 24px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .tocar-evento #form-inscricao .header-form p {
+    margin-bottom: 35px;
+  }
 }
 @media (max-width: 768px) {
   .tocar-evento #form-inscricao .header-form {
@@ -229,11 +248,18 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
+  height: 90vh;
 }
 .expor-marca h1 {
   width: 80%;
   text-align: center;
   color: white;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .expor-marca h1 {
+    margin-bottom: 20px;
+  }
 }
 .expor-marca p {
   margin-top: 25px;
@@ -274,6 +300,12 @@ h1 {
 .apoia-se .logo-jangada {
   width: 125px;
 }
+@media (max-width: 768px) {
+  .apoia-se .logo-jangada {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .apoia-se > div {
   align-self: flex-end;
   font-family: "Bebas Neue Regular", sans-serif;
@@ -285,8 +317,9 @@ h1 {
   margin-bottom: 0;
 }
 .apoia-se > div > div:nth-of-type(3) {
-  font-family: "Return of the Gunfighter", sans-serif;
-  font-size: small;
+  margin-bottom: 20px;
+  font-family: "Bebas Neue Regular", sans-serif;
+  font-size: 15px;
 }
 .apoia-se > div .logo-insta {
   width: 25px;
@@ -296,6 +329,8 @@ h1 {
 }
 @media (max-width: 768px) {
   .apoia-se {
+    display: block;
+    padding: 60px;
     flex-direction: column;
     row-gap: 50px;
   }

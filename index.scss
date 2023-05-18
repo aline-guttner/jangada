@@ -30,6 +30,8 @@ $fontsizeparagrafos: 24px;
 $fontsizetitulosmobile: 60px;
 $letterspacingtitulo: 0.06em;
 $lineheighttitulo: .8;
+$marginbottomdesktop: 50px;
+$marginbottommobile: 35px;
 
 *{
     box-sizing: border-box;
@@ -55,7 +57,7 @@ h1{
     height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     row-gap: 30px;
     padding: 0 30px;
@@ -69,10 +71,15 @@ h1{
         }
     
     .motto{
+        margin-top: -30px;
         h4{
-            font-size: XX-large;
+            font-size: 40px;
             font-family: $fonte1;
+            @media (max-width: $mobile){
+                font-size: 35px;
+            }
         }
+
         :nth-child(1){
             color: $cor1;
         }
@@ -90,7 +97,6 @@ h1{
     }
 
     .novidades{
-        margin-top: 20px;
         display: flex;
         width: 70%;
         height: 50px;
@@ -137,6 +143,11 @@ h1{
             padding: 20px;
             h1{
                 color: $cor1;
+                margin-bottom: $marginbottomdesktop;
+
+                @media (max-width: $mobile) {
+                    margin-bottom: $marginbottommobile;
+                }
             }
             p{
                 font-family: $fonte1;
@@ -201,6 +212,11 @@ h1{
                 line-height: 1.2;
                 font-family: $fonte1;
                 font-size: $fontsizeparagrafos;
+                margin-bottom: $marginbottomdesktop;
+
+                @media (max-width: $mobile) {
+                    margin-bottom: $marginbottommobile;
+                }
             }
             display: flex;
             flex-direction: column;
@@ -256,11 +272,16 @@ h1{
     align-items: center;
     justify-content: center;
     padding: 100px 0;
-
+    height: 90vh;
      h1{
         width: 80%;
         text-align: center  ;
         color: $cor1;
+        margin-bottom: 30px;
+
+        @media (max-width: $mobile) {
+            margin-bottom: 20px;
+        }
      }
      p{
         margin-top: 25px;
@@ -302,12 +323,16 @@ h1{
 
     .logo-jangada{
         width: 125px;
+
+        @media (max-width: $mobile) {
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     & > div{
         align-self: flex-end;
         font-family: $fonte1;
-
         & > div{
             p{
                 margin-bottom: 0;
@@ -315,8 +340,9 @@ h1{
             margin-top: 16px;
 
             &:nth-of-type(3){
-                font-family: $fonte2;
-                font-size: small;
+                margin-bottom: 20px;
+                font-family: $fonte1;
+                font-size: 15px;
             }
         }
 
@@ -330,6 +356,8 @@ h1{
     }
     
     @media(max-width: $mobile){
+        display: block;
+        padding: 60px;
         flex-direction: column;
         row-gap: 50px;
     }
