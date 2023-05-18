@@ -25,7 +25,11 @@ $desktop_xsm: 980px;
 $fonte1:'Bebas Neue Regular', sans-serif;
 $fonte2:'Return of the Gunfighter', sans-serif;
 $fonte3: 'Bebas Neue Light', sans-serif;
-$fontetitulos: 70px;
+$fontsizetitulos: 90px;
+$fontsizeparagrafos: 24px;
+$fontsizetitulosmobile: 60px;
+$letterspacingtitulo: 0.06em;
+$lineheighttitulo: .8;
 
 *{
     box-sizing: border-box;
@@ -35,23 +39,26 @@ body{
     background-color: $cor2;
 }
 
+h1{
+    line-height: $lineheighttitulo;
+    font-family: $fonte2;
+    font-size: $fontsizetitulos;
+    letter-spacing: $letterspacingtitulo;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        font-size: $fontsizetitulosmobile;
+    }
+}
+
 .intro{
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    .logo-titulo{
-        display: flex;
-        font-family: $fonte2;
-        color: $cor1;
-        align-items: center;
-        column-gap: 20px;
-        h1{
-            line-height: .8;
-            font-size: $fontetitulos;
-        }
+    row-gap: 30px;
+    padding: 0 30px;
         .img-desktop{
             height: 150px;
             display:block;
@@ -60,10 +67,8 @@ body{
         @media (max-width: $mobile) {
             flex-direction: column;
         }
-    }
-    span{
-        padding: 20px 20px;
-        margin: 0 10px;
+    
+    .motto{
         h4{
             font-size: XX-large;
             font-family: $fonte1;
@@ -82,6 +87,26 @@ body{
             font-family: $fonte1;
             margin-bottom: 0;
         }
+    }
+
+    .novidades{
+        margin-top: 20px;
+        display: flex;
+        width: 70%;
+        input, button{
+            border-radius: 0;
+            border: none;
+        }
+        button{
+            font-family: $fonte1;
+            color: $cor2;
+            background-color: $cor4;
+        }
+        @media (max-width: $mobile){
+            width: 100%;
+        }
+
+
     }
     
 }
@@ -106,15 +131,13 @@ body{
         justify-content: center;
         align-items: center;
         div{
-            padding: 40px;
+            padding: 20px;
             h1{
-                font-family: $fonte2;
-                font-size: $fontetitulos;
                 color: $cor1;
             }
             p{
                 font-family: $fonte1;
-                font-size: larger;
+                font-size: $fontsizeparagrafos;
                 color: $cor1;
                 line-height: 1.1;
                 a{
@@ -131,6 +154,10 @@ body{
             width: 100%;
             height: 100vh;
         }
+
+        .texto-sobre{
+            padding: 30px;
+        }
     }
 }
 
@@ -144,7 +171,7 @@ body{
     @media (max-width: $mobile){
           margin: 0;
           width: 100%;
-        }
+    }
 }
 
 .tocar-evento{
@@ -165,19 +192,20 @@ body{
 
         .header-form{
             h1{
-                font-family: $fonte2;
-                font-size: $fontetitulos;
                 color: $cor2;
-                line-height: 0.9;
             }
             p{
                 line-height: 1.2;
                 font-family: $fonte1;
-                font-size: 1.3rem;
+                font-size: $fontsizeparagrafos;
             }
             display: flex;
             flex-direction: column;
             width: 50%;
+
+            @media (max-width: $mobile){
+                width: 100%;
+            }
         }
 
         .card-body{
@@ -225,18 +253,19 @@ body{
     align-items: center;
     justify-content: center;
     padding: 100px 0;
-    
 
-    img, p {
-        width: 500px;
+     h1{
+        width: 80%;
+        text-align: center  ;
+        color: $cor1;
      }
      p{
         margin-top: 25px;
-        width: 500px;
+        width: 50%;
         text-align: center;
         color: $cor1;
         font-family: $fonte1;
-        font-size: 1.2rem;
+        font-size: $fontsizeparagrafos;
         a{
             color: $cor3;
             text-decoration: none;
@@ -244,8 +273,8 @@ body{
      }
 
      @media (max-width: $mobile){
-        img,p{
-            width: 300px;
+        p{
+            width: 80%;
         }
      }
 }

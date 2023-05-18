@@ -19,55 +19,72 @@ body {
   background-color: black;
 }
 
+h1 {
+  line-height: 0.8;
+  font-family: "Return of the Gunfighter", sans-serif;
+  font-size: 90px;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 768px) {
+  h1 {
+    flex-direction: column;
+    font-size: 60px;
+  }
+}
+
 .intro {
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  row-gap: 30px;
+  padding: 0 30px;
 }
-.intro .logo-titulo {
-  display: flex;
-  font-family: "Return of the Gunfighter", sans-serif;
-  color: white;
-  align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-.intro .logo-titulo h1 {
-  line-height: 0.8;
-  font-size: 70px;
-}
-.intro .logo-titulo .img-desktop {
+.intro .img-desktop {
   height: 150px;
   display: block;
 }
 @media (max-width: 768px) {
-  .intro .logo-titulo {
+  .intro {
     flex-direction: column;
   }
 }
-.intro span {
-  padding: 20px 20px;
-  margin: 0 10px;
-}
-.intro span h4 {
+.intro .motto h4 {
   font-size: XX-large;
   font-family: "Bebas Neue Regular", sans-serif;
 }
-.intro span :nth-child(1) {
+.intro .motto :nth-child(1) {
   color: white;
 }
-.intro span :nth-child(2) {
+.intro .motto :nth-child(2) {
   color: black;
   background-color: #EE8BB0;
   padding: 0 10px;
 }
-.intro span h4 {
+.intro .motto h4 {
   text-align: center;
   font-family: "Bebas Neue Regular", sans-serif;
   margin-bottom: 0;
+}
+.intro .novidades {
+  margin-top: 20px;
+  display: flex;
+  width: 70%;
+}
+.intro .novidades input, .intro .novidades button {
+  border-radius: 0;
+  border: none;
+}
+.intro .novidades button {
+  font-family: "Bebas Neue Regular", sans-serif;
+  color: black;
+  background-color: #DBDD48;
+}
+@media (max-width: 768px) {
+  .intro .novidades {
+    width: 100%;
+  }
 }
 
 .imagem-fundo-01 {
@@ -93,16 +110,14 @@ body {
   align-items: center;
 }
 .sobre-nos .texto-sobre div {
-  padding: 40px;
+  padding: 20px;
 }
 .sobre-nos .texto-sobre div h1 {
-  font-family: "Return of the Gunfighter", sans-serif;
-  font-size: 70px;
   color: white;
 }
 .sobre-nos .texto-sobre div p {
   font-family: "Bebas Neue Regular", sans-serif;
-  font-size: larger;
+  font-size: 24px;
   color: white;
   line-height: 1.1;
 }
@@ -118,6 +133,9 @@ body {
   .sobre-nos .pessoas, .sobre-nos .texto-sobre {
     width: 100%;
     height: 100vh;
+  }
+  .sobre-nos .texto-sobre {
+    padding: 30px;
   }
 }
 
@@ -161,15 +179,17 @@ body {
   width: 50%;
 }
 .tocar-evento #form-inscricao .header-form h1 {
-  font-family: "Return of the Gunfighter", sans-serif;
-  font-size: 70px;
   color: black;
-  line-height: 0.9;
 }
 .tocar-evento #form-inscricao .header-form p {
   line-height: 1.2;
   font-family: "Bebas Neue Regular", sans-serif;
-  font-size: 1.3rem;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .tocar-evento #form-inscricao .header-form {
+    width: 100%;
+  }
 }
 .tocar-evento #form-inscricao .card-body {
   padding: 0;
@@ -207,24 +227,26 @@ body {
   justify-content: center;
   padding: 100px 0;
 }
-.expor-marca img, .expor-marca p {
-  width: 500px;
+.expor-marca h1 {
+  width: 80%;
+  text-align: center;
+  color: white;
 }
 .expor-marca p {
   margin-top: 25px;
-  width: 500px;
+  width: 50%;
   text-align: center;
   color: white;
   font-family: "Bebas Neue Regular", sans-serif;
-  font-size: 1.2rem;
+  font-size: 24px;
 }
 .expor-marca p a {
   color: #EE8BB0;
   text-decoration: none;
 }
 @media (max-width: 768px) {
-  .expor-marca img, .expor-marca p {
-    width: 300px;
+  .expor-marca p {
+    width: 80%;
   }
 }
 
