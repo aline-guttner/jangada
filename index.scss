@@ -325,6 +325,7 @@ h1{
         width: 125px;
 
         @media (max-width: $mobile) {
+            margin-bottom: 50px;
             margin-left: 50%;
             transform: translateX(-50%);
         }
