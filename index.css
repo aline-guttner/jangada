@@ -71,12 +71,15 @@ h1 {
   margin-top: 20px;
   display: flex;
   width: 70%;
+  height: 50px;
 }
 .intro .novidades input, .intro .novidades button {
   border-radius: 0;
   border: none;
 }
 .intro .novidades button {
+  height: 50px;
+  padding: 0 30px;
   font-family: "Bebas Neue Regular", sans-serif;
   color: black;
   background-color: #DBDD48;

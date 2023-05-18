@@ -93,11 +93,14 @@ h1{
         margin-top: 20px;
         display: flex;
         width: 70%;
+        height: 50px;
         input, button{
             border-radius: 0;
             border: none;
         }
         button{
+            height: 50px;
+            padding: 0 30px;
             font-family: $fonte1;
             color: $cor2;
             background-color: $cor4;
