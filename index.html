@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participe | Jangada Festival</title>
+    <meta name="description"
+        content="O Jangada Festival é um evento cultural que une artistas independentes da cidade de Itatiba e região">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
-    <link rel="manifest" href="imagens/site.webmanifest">
+    <!-- <link rel="manifest" href="imagens/site.webmanifest"> -->
     <link rel="mask-icon" href="imagens/safari-pinned-tab.svg" color="#ff0000">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#000000">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <title>Participe | Jangada Festival</title>
-    <meta name="description" content="O Jangada Festival é um evento cultural que une artistas independentes da cidade de Itatiba e região">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </head>
 
 <body>
     <div class="intro">
-  
-            <img class="img-desktop " src="imagens/logo_branco.png" alt="festival jangada">
-            <img class="img-mobile" src="imagens/logo_vertical_branco.png" alt="festival jangada">
-            <span class="motto">
-                <h4>LUTAMOS PELO DESENVOLVIMENTO DA</h4>
-                <h4>ARTE AUTORAL E IDENPENDENTE NO INTERIOR</h4>
-            </span>
-            <div class="input-group mb-3 novidades">
-                <input type="text" class="form-control" placeholder="Que tal já embarcar nas novidades? Coloque seu e-mail." aria-label="Que tal já embarcar nas novidades? Coloque seu e-mail." aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">Enviar</button>
-                </div>
-              </div>
+
+        <img class="img-desktop " src="imagens/logo_branco.png" alt="festival jangada">
+        <img class="img-mobile" src="imagens/logo_vertical_branco.png" alt="festival jangada">
+        <span class="motto">
+            <h4>LUTAMOS PELO DESENVOLVIMENTO DA</h4>
+            <h4>ARTE AUTORAL E IDENPENDENTE NO INTERIOR</h4>
+        </span>
+        <div class="input-group mb-3 novidades">
+            <input type="text" class="form-control" placeholder="Que tal já embarcar nas novidades? Coloque seu e-mail."
+                aria-label="Que tal já embarcar nas novidades? Coloque seu e-mail." aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Enviar</button>
+            </div>
+        </div>
     </div>
-    
+
     <img src="imagens/Fundo_01.png" class="imagem-fundo-01" alt="linhas coloridas de fundo">
     <div id="sobre-nos" class="sobre-nos">
         <img src="imagens/IMG_02.png" class="pessoas" alt="pessoas ao redor de uma mesa de artesanato">
@@ -63,27 +62,27 @@
     </div>
     <img class="vetor-pessoas" src="imagens/VETOR_PESSOAS.png" alt="desenho rosa de pessoas">
     <div class="tocar-evento">
-        
+
         <div id="form-inscricao" class="container mt-5 form-desktop">
             <div class="header-form">
-                    <h1>Quer participar do nosso evento?</h1>
-                    <p>inscreva você ou sua banda para tocar no nosso evento cultural!</p>
+                <h1>Quer participar do nosso evento?</h1>
+                <p>inscreva você ou sua banda para tocar no nosso evento cultural!</p>
             </div>
             <!-- <img src="jangada-logo.jpg" class="logo" alt=""> -->
             <div class="card">
                 <div class="card-body">
-                    <form action="#" class="form-contact">
+                    <form action="#" class="form-contact" id="form-c">
                         <div class="row">
                             <div class="mb-3 col">
-                                <label for="name" class="form-label">Nome do Artista: (nome artístico e nome completo)</label>
+                                <label for="name" class="form-label">Nome do Artista: (nome artístico e nome
+                                    completo)</label>
                                 <input type="text" name="name" id="name" class="form-control">
                             </div>
                         </div>
                         <div class="row one-row-mobile">
                             <div class="col mb-3">
                                 <label class="form-label" for="art">Fale resumidamente sobre sua arte</label>
-                                <textarea name="art" id="art" class="form-control" cols="50"
-                                    rows="12"></textarea>
+                                <textarea name="art" id="art" class="form-control" cols="50" rows="12"></textarea>
                             </div>
                             <div class="col">
                                 <div class="mb-3">
@@ -91,27 +90,30 @@
                                     <input type="text" name="place" id="place" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="social" class="form-label">Rede social (preferência Instagram)</label>
-                                    <input type="text" name="social" id="social" class="form-control">
+                                    <label for="socialmedia" class="form-label">Rede social (preferência
+                                        Instagram)</label>
+                                    <input type="text" name="socialmedia" id="socialmedia" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">social</label>
-                                    <input type="email" name="email" id="email" class="form-control">
+                                    <label for="whatsapp" class="form-label">WhatsApp</label>
+                                    <input type="text" name="whatsapp" id="whatsapp" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="drive" class="form-label">E-mail</label>
-                                    <input type="text" name="drive" id="drive" class="form-control">
+                                    <label for="mail" class="form-label">E-mail</label>
+                                    <input type="email" name="mail" id="mail" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="mb-3 col">
-                                <label for="gdrive" class="form-label">Link do Google Drive - Mande o seu material - foto/links/arquivo de áudio/vídeo</label>
+                                <label for="gdrive" class="form-label">Link do Google Drive - Mande o seu material -
+                                    foto/links/arquivo de áudio/vídeo</label>
                                 <input type="text" name="gdrive" id="gdrive" class="form-control">
                             </div>
                         </div>
                         <input class="btn btn-success enviar" type="submit" value="Enviar" id="submit">
-                        <p class="regulamento">*confira o <a href=""><b>regulamento aqui </b></a> e/ou pelo e-mail - Por favor, verifique a caixa de spam!</p>
+                        <p class="regulamento">*confira o <a href=""><b>regulamento aqui </b></a> e/ou pelo e-mail - Por
+                            favor, verifique a caixa de spam!</p>
                     </form>
 
                 </div>
@@ -210,5 +212,4 @@
     </div>
     <script src="./index.js"></script>
 </body>
-
 </html>
