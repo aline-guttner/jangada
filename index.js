@@ -56,9 +56,9 @@ function getSubmitEmail() {
                         <img src="https://github.com/aline-guttner/jangada/blob/main/imagens/email/apoaise.png?raw=true" style="margin-bottom: 25px;"width="170px" alt="">
                         <span style="display: flex;">
                             <img src="https://github.com/aline-guttner/jangada/blob/main/imagens/email/pngwing.com.png?raw=true" alt="instagram" height="30px" style="align-self: center;">
-                            <p style="font-family: 'Arial';color: #fff;">JANGADA.FESTIVAL</p>
+                            <p style="font-family: 'Arial';color: #fff; padding-bottom: 5px;">JANGADA.FESTIVAL</p>
                         </span>
-                        <p style="margin: 0px; padding-left: 3px; font-family: 'Open Sans', sans-serif;color: #fff;">JANGADAFESTIVAL@GMAIL.COM</p>
+                        <p style="margin: 0px; padding-left: 3px; font-family: 'Open Sans', sans-serif;color: #fff; ">JANGADAFESTIVAL@GMAIL.COM</p>
                     </div>
                 </td>
             </tr>
