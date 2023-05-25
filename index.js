@@ -103,7 +103,7 @@ function getSubmitEmail() {
             Body: forJangada
         }).then(
             message => {
-                alert(message);
+                //alert(message);
 
                 // Enviar regulamento para o e-mail do usuário
                 Email.send({
@@ -113,7 +113,7 @@ function getSubmitEmail() {
                     Subject: "Regulamento Jangada Festival",
                     Body: forInscrito
                 }).then(
-                    message => alert(message)
+                   message => alert("E-mail enviado com sucesso!")
                 );
             }
         );
