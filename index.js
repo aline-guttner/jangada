@@ -36,7 +36,7 @@ function getSubmitEmail() {
         </tr>
         <tr>
             <td colspan="2" align="center" bgcolor="#000"  style="padding: 0;">
-                <img src="imagens/logo_vertical_branco.png" style="margin-bottom: 30px; width: 130px; margin-top: 30px;" alt="JANGADA" width="180">
+                <img src="https://github.com/aline-guttner/jangada/blob/main/imagens/logo_vertical_branco.png?raw=true" style="margin-bottom: 30px; width: 130px; margin-top: 30px;" alt="JANGADA" width="180">
             </td>
         </tr>
         <tr>
