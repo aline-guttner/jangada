@@ -12,7 +12,7 @@ function getSubmitEmail() {
         formData.append('Whatsapp', whatsapp.value);
         formData.append('Google Drive', gdrive.value);
         formData.append('Email', mail.value);
-
+  
         const forJangada = `
     <b>Nome: </b> ${user.value}
     <br>
