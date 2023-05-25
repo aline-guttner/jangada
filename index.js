@@ -14,7 +14,7 @@ function getSubmitEmail() {
         formData.append('Email', mail.value);
 
         const forJangada = `
-    <b>Nome: </b> ${name.value}
+    <b>Nome: </b> ${user.value}
     <br>
     <b>Fale resumidamente sobre sua arte: </b> ${art.value}
     <br>
