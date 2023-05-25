@@ -5,7 +5,7 @@ function getSubmitEmail() {
         e.preventDefault();
 
         const formData = new FormData();
-        formData.append('Nome', name.value);
+        formData.append('Nome', user.value);
         formData.append('Arte', art.value);
         formData.append('Local', place.value);
         formData.append('Social Media', socialmedia.value);
