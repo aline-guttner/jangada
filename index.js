@@ -43,7 +43,7 @@ function getSubmitEmail() {
                 <td colspan="2" bgcolor="#000" style="padding: 40px 30px;">
                     <h2 style="text-align: center; font-family: 'Open Sans', sans-serif; margin-bottom: 50px; color: #fff">OBRIGADO POR SE INSCREVER</h1>
                     <h2 style="text-align: center; font-family: 'Arial';color: #fff;">Regulamentos</h1>
-                    <p style="font-size: 16px; line-height: 24px; margin: 0; font-family: 'Arial';color: #fff;">
+                    <p style="font-size: 16px; line-height: 24px; margin: 0 0 50px 0; font-family: 'Arial';color: #fff;">
                         Aqui está o conteúdo do seu e-mail. Você pode adicionar texto, imagens, links e outros elementos HTML
                         conforme necessário.
                     </p>
@@ -54,9 +54,9 @@ function getSubmitEmail() {
                 <td>
                     <div style="padding-left: 20px; padding-top: 50px;">
                         <img src="https://github.com/aline-guttner/jangada/blob/main/imagens/email/apoaise.png?raw=true" style="margin-bottom: 25px;"width="170px" alt="">
-                        <span style="display: flex;">
-                            <img src="https://github.com/aline-guttner/jangada/blob/main/imagens/email/pngwing.com.png?raw=true" alt="instagram" height="30px" style="align-self: center;">
-                            <p style="font-family: 'Arial';color: #fff; padding-bottom: 5px;">JANGADA.FESTIVAL</p>
+                        <span style="display: flex; align-items:center;">
+                            <img src="https://github.com/aline-guttner/jangada/blob/main/imagens/email/pngwing.com.png?raw=true" alt="instagram" style="height: 30px;">
+                            <p style="font-family: 'Arial';color: #fff;">JANGADA.FESTIVAL</p>
                         </span>
                         <p style="margin: 0px; padding-left: 3px; font-family: 'Open Sans', sans-serif;color: #fff; ">JANGADAFESTIVAL@GMAIL.COM</p>
                     </div>
