@@ -110,26 +110,38 @@ h1{
         }
     }
 
-    .novidades{
+    .novidades-container{
+        width: 100%;
         display: flex;
-        width: 70%;
-        height: 50px;
-        input, button{
-            border-radius: 0;
-            border: none;
+        flex-direction: column;
+        align-items: center;
+        #msgNewsletter{
+            color: $cor1;
+            margin: 0;
+           text-align: center;
         }
-        button{
+    
+        .novidades{
+            display: flex;
+            width: 70%;
             height: 50px;
-            padding: 0 30px;
-            font-family: $fonte1;
-            color: $cor2;
-            background-color: $cor4;
+            input, button{
+                border-radius: 0;
+                border: none;
+            }
+            button{
+                height: 50px;
+                padding: 0 30px;
+                font-family: $fonte1;
+                color: $cor2;
+                background-color: $cor4;
+            }
+            @media (max-width: $mobile){
+                width: 100%;
+            }
+    
+    
         }
-        @media (max-width: $mobile){
-            width: 100%;
-        }
-
-
     }
     
 }
@@ -275,6 +287,19 @@ h1{
                             letter-spacing: 0.1rem;
                             font-size: large;
                            
+            }
+
+            #captcha{
+                #captcha-container{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                }
+
+                button{
+                    background-color: $cor1;
+                    border: solid $cor2 1px;
+                }
             }
         }
     }

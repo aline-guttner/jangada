@@ -2,7 +2,14 @@ function getSubmitEmail() {
     const submit = document.getElementsByClassName('form-contact')[0];
 
     submit.addEventListener('submit', (e) => {
+        submit.reset();
         e.preventDefault();
+        const captchaBtn = document.getElementById('captcha-btn');
+        const envioBtn = document.getElementsByClassName('enviar')[0];
+        const captchaText = document.getElementById('captcha-text');
+        captchaBtn.style.display = 'initial';
+        envioBtn.setAttribute('disabled', true);
+        captchaText.innerText = "";
 
         const formData = new FormData();
         formData.append('Nome', user.value);
@@ -28,6 +35,7 @@ function getSubmitEmail() {
     <br>
     <b>Email: </b> ${mail.value}
     `;
+      
         const forInscrito = `
 
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; margin: 0; background-color: #000;" >
@@ -95,28 +103,28 @@ function getSubmitEmail() {
         </tr>
     </table>`;
 
-        Email.send({
-            SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
-            To: "jangadafestival@gmail.com",
-            From: "jangadafestival@gmail.com",
-            Subject: "Inscrição Jangada",
-            Body: forJangada
-        }).then(
-            message => {
-                //alert(message);
+        // Email.send({
+        //     SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+        //     To: "jangadafestival@gmail.com",
+        //     From: "jangadafestival@gmail.com",
+        //     Subject: "Inscrição Jangada",
+        //     Body: forJangada
+        // }).then(
+        //     message => {
+        //         //alert(message);
 
-                // Enviar regulamento para o e-mail do usuário
-                Email.send({
-                    SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
-                    To: mail.value,
-                    From: "jangadafestival@gmail.com",
-                    Subject: "Regulamento Jangada Festival",
-                    Body: forInscrito
-                }).then(
-                   message => alert("E-mail enviado com sucesso!")
-                );
-            }
-        );
+        //         // Enviar regulamento para o e-mail do usuário
+        //         Email.send({
+        //             SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+        //             To: mail.value,
+        //             From: "jangadafestival@gmail.com",
+        //             Subject: "Regulamento Jangada Festival",
+        //             Body: forInscrito
+        //         }).then(
+        //            message => alert("E-mail enviado com sucesso!")
+        //         );
+        //     }
+        // );
     });
 }
 getSubmitEmail();
@@ -139,3 +147,100 @@ function carousel() {
     })
 }
 carousel();
+
+
+const btn = document.getElementsByClassName('btnNewsletter')[0]
+
+
+btn.addEventListener('click', () => {
+    const newsletter = document.getElementsByClassName('newsletter')[0]
+    const msgNewsletter = document.getElementById('msgNewsletter');
+    msgNewsletter.style.display = 'initial';
+    const forJangada2 = `Novo assinante newsletter: ${newsletter.value} `
+    console.log(newsletter)
+    Email.send({
+        // SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+        // To: "iamlelly+2m959j3hdmzejsn3x2j+30ht1nk9exsvw9p3bcv+1qp3d1ksms@boards.trello.com",
+        // From: "jangadafestival@gmail.com",
+        // Subject: "Newsletter Jangada",
+        // Body: forJangada2
+    }).then(
+        message => {
+    
+            // Enviar regulamento para o e-mail do usuário
+            // Email.send({
+            //     SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+            //     To: mail.value,
+            //     From: "jangadafestival@gmail.com",
+            //     Subject: "Regulamento Jangada Festival",
+            //     Body: forInscrito
+            // }).then(
+            //    message => alert("E-mail enviado com sucesso!")
+            // );
+        }
+    );
+
+    newsletter.value = ''
+})
+
+// Função para gerar um código de CAPTCHA aleatório
+function generateCaptcha() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let captcha = '';
+    for (let i = 0; i < 6; i++) {
+      captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return captcha;
+  }
+  
+  // Função para exibir o CAPTCHA na página
+  function showCaptcha(e) {
+    e.preventDefault();
+    const btnVerify = document.getElementById('btnVerify');
+    btnVerify.removeAttribute('disabled');
+    const captchaContainer = document.getElementById('captcha-container');
+    const captchaCode = generateCaptcha();
+    
+    // Exibir o código do CAPTCHA
+    const captchaText = document.createElement('span');
+    captchaText.textContent = captchaCode;
+    captchaText.setAttribute('id','captcha-text')
+    
+    // Criar um campo de entrada para o usuário digitar o CAPTCHA
+    const captchaInput = document.createElement('input');
+    captchaInput.type = 'text';
+    
+    // Adicionar o texto do CAPTCHA e o campo de entrada ao contêiner
+    captchaContainer.innerHTML = '';
+    captchaContainer.appendChild(captchaText);
+    captchaContainer.appendChild(captchaInput);
+  }
+
+  document.getElementById('btnShow').addEventListener('click', showCaptcha);
+  
+  // Função para verificar se o CAPTCHA foi inserido corretamente
+  function verifyCaptcha(e) {
+    e.preventDefault();
+    const userInput = document.getElementById('captcha-container').getElementsByTagName('input')[0];
+    const captchaCode = document.getElementById('captcha-container').getElementsByTagName('span')[0].textContent;
+    const captchaBtn = document.getElementById('captcha-btn');
+    const captchaText = document.getElementById('captcha-text');
+    const envioBtn = document.getElementsByClassName('enviar')[0];
+
+    if (userInput.value === captchaCode) {
+        captchaText.style.color = 'green';
+        captchaText.innerText="CAPTCHA validado com sucesso! Envie o formulário.";
+        captchaBtn.style.display = 'none';
+        userInput.style.display = 'none';
+        envioBtn.removeAttribute('disabled');
+    } else {
+        const btnVerify = document.getElementById('btnVerify');
+        btnVerify.setAttribute('disabled', 'true');
+        captchaText.style.color = 'red';
+        captchaText.innerHTML="CAPTCHA incorreto. Por favor, tente novamente.";
+    }
+  }
+
+  document.getElementById('btnVerify').addEventListener('click', verifyCaptcha);
+
+  
