@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header :nth-child(1) {
+  margin-top: -20px;
+  width: 100%;
+}
+header :nth-child(2) {
+  margin-top: 30px;
+  width: 150px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  margin-bottom: 50px;
+}
+section h2 {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+}
+footer > img {
+  width: 30%;
+}
+@media (max-width: 768px) {
+  footer > img {
+    width: 40%;
+  }
+}
+footer div {
+  margin: auto;
+}
+footer div span {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+footer div span img {
+  margin-left: -10px;
+  width: 47px;
+  height: 30px;
+}
+footer div p {
+  margin: 0;
+}
+
+h2, h3, p {
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}/*# sourceMappingURL=email.css.map */
