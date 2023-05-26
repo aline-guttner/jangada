@@ -103,28 +103,28 @@ function getSubmitEmail() {
         </tr>
     </table>`;
 
-        // Email.send({
-        //     SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
-        //     To: "jangadafestival@gmail.com",
-        //     From: "jangadafestival@gmail.com",
-        //     Subject: "Inscrição Jangada",
-        //     Body: forJangada
-        // }).then(
-        //     message => {
-        //         //alert(message);
+        Email.send({
+            SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+            To: "jangadafestival@gmail.com",
+            From: "jangadafestival@gmail.com",
+            Subject: "Inscrição Jangada",
+            Body: forJangada
+        }).then(
+            message => {
+                //alert(message);
 
-        //         // Enviar regulamento para o e-mail do usuário
-        //         Email.send({
-        //             SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
-        //             To: mail.value,
-        //             From: "jangadafestival@gmail.com",
-        //             Subject: "Regulamento Jangada Festival",
-        //             Body: forInscrito
-        //         }).then(
-        //            message => alert("E-mail enviado com sucesso!")
-        //         );
-        //     }
-        // );
+                // Enviar regulamento para o e-mail do usuário
+                Email.send({
+                    SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+                    To: mail.value,
+                    From: "jangadafestival@gmail.com",
+                    Subject: "Regulamento Jangada Festival",
+                    Body: forInscrito
+                }).then(
+                   message => alert("E-mail enviado com sucesso!")
+                );
+            }
+        );
     });
 }
 getSubmitEmail();
@@ -159,11 +159,11 @@ btn.addEventListener('click', () => {
     const forJangada2 = `Novo assinante newsletter: ${newsletter.value} `
     console.log(newsletter)
     Email.send({
-        // SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
-        // To: "iamlelly+2m959j3hdmzejsn3x2j+30ht1nk9exsvw9p3bcv+1qp3d1ksms@boards.trello.com",
-        // From: "jangadafestival@gmail.com",
-        // Subject: "Newsletter Jangada",
-        // Body: forJangada2
+        SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
+        To: "iamlelly+2m959j3hdmzejsn3x2j+30ht1nk9exsvw9p3bcv+1qp3d1ksms@boards.trello.com",
+        From: "jangadafestival@gmail.com",
+        Subject: "Newsletter Jangada",
+        Body: forJangada2
     }).then(
         message => {
     
