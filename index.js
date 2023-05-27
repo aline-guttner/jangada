@@ -104,8 +104,8 @@
 
         Email.send({
             SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
-            To: "jangadafestival@gmail.com",
-            From: "jangadafestival@gmail.com",
+            To: "aline.guttner@outlook.com",
+            From: "aline.guttner@outlook.com",
             Subject: "Inscrição Jangada",
             Body: forJangada
         }).then(
