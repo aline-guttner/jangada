@@ -2,7 +2,6 @@ function getSubmitEmail() {
     const submit = document.getElementsByClassName('form-contact')[0];
 
     submit.addEventListener('submit', (e) => {
-        submit.reset();
         e.preventDefault();
         const captchaBtn = document.getElementById('captcha-btn');
         const envioBtn = document.getElementsByClassName('enviar')[0];
@@ -126,6 +125,7 @@ function getSubmitEmail() {
             }
         );
     });
+    submit.reset();
 }
 getSubmitEmail();
 
