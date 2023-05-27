@@ -289,19 +289,21 @@ h1{
                            
             }
 
-            #captcha{
-                #captcha-container{
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 10px;
-                }
-
-                button{
-                    background-color: $cor1;
-                    border: solid $cor2 1px;
-                }
-            }
+          
         }
+    }
+}
+
+#captcha{
+    #captcha-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    button{
+        background-color: $cor1;
+        border: solid $cor2 1px;
     }
 }
 

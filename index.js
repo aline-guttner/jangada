@@ -195,7 +195,7 @@ function generateCaptcha() {
   
   // Função para exibir o CAPTCHA na página
   function showCaptcha(e) {
-    e.preventDefault();
+  //  e.preventDefault();
     const btnVerify = document.getElementById('btnVerify');
     btnVerify.removeAttribute('disabled');
     const captchaContainer = document.getElementById('captcha-container');
@@ -220,7 +220,7 @@ function generateCaptcha() {
   
   // Função para verificar se o CAPTCHA foi inserido corretamente
   function verifyCaptcha(e) {
-    e.preventDefault();
+    //e.preventDefault();
     const userInput = document.getElementById('captcha-container').getElementsByTagName('input')[0];
     const captchaCode = document.getElementById('captcha-container').getElementsByTagName('span')[0].textContent;
     const captchaBtn = document.getElementById('captcha-btn');
