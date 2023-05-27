@@ -125,7 +125,6 @@ function getSubmitEmail() {
             }
         );
     });
-    submit.reset();
 }
 getSubmitEmail();
 
