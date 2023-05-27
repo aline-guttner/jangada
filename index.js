@@ -1,4 +1,4 @@
-function getSubmitEmail() {
+
     const submit = document.getElementsByClassName('form-contact')[0];
 
     submit.addEventListener('submit', (e) => {
@@ -125,8 +125,7 @@ function getSubmitEmail() {
             }
         );
     });
-}
-getSubmitEmail();
+
 
 function carousel() {
     let items = document.querySelectorAll('.carousel .carousel-item')
