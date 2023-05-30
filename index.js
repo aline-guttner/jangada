@@ -209,7 +209,7 @@ function generateCaptcha() {
     captchaInput.type = 'text';
     
     // Adicionar o texto do CAPTCHA e o campo de entrada ao contêiner
-    captchaContainer.innerHTML = 'Digite o código abaixo: ';
+    captchaContainer.innerHTML = ' ';
     captchaContainer.appendChild(captchaText);
     captchaContainer.appendChild(captchaInput);
   }
