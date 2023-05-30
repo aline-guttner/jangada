@@ -121,6 +121,8 @@
                     Body: forInscrito
                 }).then(
                    message => alert("E-mail enviado com sucesso!")
+                ). then( 
+                    location.reload()
                 );
             }
         );
