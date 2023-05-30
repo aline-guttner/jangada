@@ -3,6 +3,7 @@
 
     submit.addEventListener('submit', (e) => {
         e.preventDefault();
+        const submit = document.getElementsByClassName('form-contact')[0];
         const captchaBtn = document.getElementById('captcha-btn');
         const envioBtn = document.getElementsByClassName('enviar')[0];
         const captchaText = document.getElementById('captcha-text');
@@ -121,11 +122,13 @@
                     Body: forInscrito
                 }).then(
                    message => alert("E-mail enviado com sucesso!")
-                ). then( 
-                    location.reload()
-                );
+                ).then(
+                    submit.reset()
+                )
             }
         );
+
+        
     });
 
 
