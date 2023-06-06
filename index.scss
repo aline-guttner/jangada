@@ -115,6 +115,7 @@ h1{
         display: flex;
         flex-direction: column;
         align-items: center;
+
         #msgNewsletter{
             color: $cor1;
             margin: 0;
@@ -136,6 +137,7 @@ h1{
                 color: $cor2;
                 background-color: $cor4;
             }
+
             @media (max-width: $mobile){
                 width: 100%;
             }
@@ -275,6 +277,39 @@ h1{
                             }
             }
 
+            a{
+                color: red;
+            }
+
+            #captcha{
+                #captcha-container{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+            
+                button{
+                    background-color: $cor1;
+                    border: solid $cor2 1px;
+                }
+            }
+
+            .checkbox-container{
+                margin-top: 10px;
+                display: flex;
+                column-gap: 10px;
+                p{
+                    margin: 0;
+                    line-height: 17px;
+                }
+            }
+
             .enviar{
                             font-family: $fonte2;
                             margin: 10px 0;
@@ -289,29 +324,14 @@ h1{
                            
             }
 
-          
         }
+        
     }
+    
 }
 
-#captcha{
-    #captcha-container{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
 
-    button{
-        background-color: $cor1;
-        border: solid $cor2 1px;
-    }
-}
+
 
 .expor-marca{
     display: flex;

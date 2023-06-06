@@ -229,13 +229,18 @@ function generateCaptcha() {
     const captchaBtn = document.getElementById('captcha-btn');
     const captchaText = document.getElementById('captcha-text');
     const envioBtn = document.getElementsByClassName('enviar')[0];
+    const check = document.getElementById('check');
 
     if (userInput.value === captchaCode) {
         captchaText.style.color = 'green';
         captchaText.innerText="CAPTCHA validado com sucesso! Envie o formulário.";
         captchaBtn.style.display = 'none';
         userInput.style.display = 'none';
-        envioBtn.removeAttribute('disabled');
+
+        if(check.checked){
+            envioBtn.removeAttribute('disabled');
+        }
+
     } else {
         const btnVerify = document.getElementById('btnVerify');
         btnVerify.setAttribute('disabled', 'true');
@@ -246,4 +251,20 @@ function generateCaptcha() {
 
   document.getElementById('btnVerify').addEventListener('click', verifyCaptcha);
 
-  
+
+  const check = document.getElementById('check');
+
+  check.addEventListener('click', () => {
+    const captchaText = document.getElementById('captcha-text');
+    const envioBtn = document.getElementsByClassName('enviar')[0];
+    if(captchaText){       
+        if(!check.checked) {
+            envioBtn.setAttribute('disabled', true);
+        }
+        else if(captchaText.innerText == "CAPTCHA validado com sucesso! Envie o formulário."){
+            envioBtn.removeAttribute('disabled');
+        } 
+    }
+  })
+
+ 

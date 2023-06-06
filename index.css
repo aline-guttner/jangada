@@ -251,6 +251,32 @@ h1 {
     flex-direction: column;
   }
 }
+.tocar-evento #form-inscricao form a {
+  color: red;
+}
+.tocar-evento #form-inscricao form #captcha #captcha-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.tocar-evento #form-inscricao form #captcha button {
+  background-color: white;
+  border: solid black 1px;
+}
+.tocar-evento #form-inscricao form .checkbox-container {
+  margin-top: 10px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.tocar-evento #form-inscricao form .checkbox-container p {
+  margin: 0;
+  line-height: 17px;
+}
 .tocar-evento #form-inscricao form .enviar {
   font-family: "Return of the Gunfighter", sans-serif;
   margin: 10px 0;
@@ -262,20 +288,6 @@ h1 {
   font-family: "Bebas Neue Regular", sans-serif;
   letter-spacing: 0.1rem;
   font-size: large;
-}
-
-#captcha #captcha-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-#captcha button {
-  background-color: white;
-  border: solid black 1px;
 }
 
 .expor-marca {
