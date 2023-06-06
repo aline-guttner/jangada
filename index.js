@@ -158,9 +158,8 @@ const btn = document.getElementsByClassName('btnNewsletter')[0]
 btn.addEventListener('click', () => {
     const newsletter = document.getElementsByClassName('newsletter')[0]
     const msgNewsletter = document.getElementById('msgNewsletter');
-    msgNewsletter.style.display = 'initial';
+    msgNewsletter.innerText = 'E-mail enviado com sucesso!';
     const forJangada2 = `Novo assinante newsletter: ${newsletter.value} `
-    console.log(newsletter)
     Email.send({
         SecureToken: "509c7ac1-f303-4f82-b439-139b720bc1e4",
         To: "iamlelly+2m959j3hdmzejsn3x2j+30ht1nk9exsvw9p3bcv+1qp3d1ksms@boards.trello.com",
