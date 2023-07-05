@@ -203,8 +203,8 @@ h1 {
   }
 }
 .tocar-evento #form-inscricao {
-    background-color: white;
-    padding: 50px;
+  background-color: white;
+  padding: 50px;
 }
 @media (max-width: 768px) {
   .tocar-evento #form-inscricao {
