@@ -203,6 +203,7 @@ h1{
     }
 }
 
+
 .vetor-pessoas{
     width: 45%;
     margin-top: -70px;
@@ -210,6 +211,19 @@ h1{
     z-index: 2;
     position: relative;
     margin-left: 55%;
+    @media (max-width: $mobile){
+          margin: 0;
+          width: 100%;
+    }
+}
+
+.vetor-pessoas-juntese{
+    width: 40%;
+    margin-top: -70px;
+    margin-bottom: -270px;
+    z-index: 2;
+    position: relative;
+    margin-left: 60%;
     @media (max-width: $mobile){
           margin: 0;
           width: 100%;
@@ -330,8 +344,17 @@ h1{
     
 }
 
+.avaliacao{
+ border-left: solid 30px $cor1;
+ border-right: solid 30px $cor1;
+ background: $cor1;
+ height: 1349px;
 
+ @media (max-width: $mobile){
+    height: auto;
+}
 
+}
 
 .expor-marca{
     display: flex;

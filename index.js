@@ -1,3 +1,21 @@
+function carousel() {
+    let items = document.querySelectorAll('.carousel .carousel-item')
+
+    items.forEach((el) => {
+        const minPerSlide = 3
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+            if (!next) {
+                // wrap carousel by using first child
+                next = items[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
+        }
+    })
+}
+carousel();
 
     const submit = document.getElementsByClassName('form-contact')[0];
 
@@ -132,24 +150,7 @@
     });
 
 
-function carousel() {
-    let items = document.querySelectorAll('.carousel .carousel-item')
 
-    items.forEach((el) => {
-        const minPerSlide = 3
-        let next = el.nextElementSibling
-        for (var i = 1; i < minPerSlide; i++) {
-            if (!next) {
-                // wrap carousel by using first child
-                next = items[0]
-            }
-            let cloneChild = next.cloneNode(true)
-            el.appendChild(cloneChild.children[0])
-            next = next.nextElementSibling
-        }
-    })
-}
-carousel();
 
 
 const btn = document.getElementsByClassName('btnNewsletter')[0]
@@ -266,4 +267,5 @@ function generateCaptcha() {
     }
   })
 
+  
  
