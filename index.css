@@ -42,6 +42,7 @@ h1 {
   padding: 0 30px;
 }
 .intro .img-desktop {
+  margin-top: 20px;
   height: 230px;
   display: block;
 }
@@ -95,21 +96,24 @@ h1 {
   letter-spacing: 0.1rem;
   text-align: center;
   padding: 0;
-  line-height: 1.2rem;
+  line-height: 2.5rem;
 }
 @media (max-width: 768px) {
   .intro .motto-juntese h4 {
+    line-height: 2rem;
     font-size: 60px;
   }
 }
 .intro .motto-juntese p {
+  line-height: 2rem;
   font-family: "Bebas Neue Regular", sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Bebas Neue Regular", sans-serif;
 }
 @media (max-width: 768px) {
   .intro .motto-juntese p {
     font-size: 25px;
+    line-height: 1.5rem;
   }
 }
 .intro .novidades-container {
