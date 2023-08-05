@@ -62,7 +62,7 @@ h1{
     row-gap: 30px;
     padding: 0 30px;
         .img-desktop{
-            height: 150px;
+            height: 230px;
             display:block;
         }
 
@@ -108,6 +108,31 @@ h1{
             font-family: $fonte1;
             margin-bottom: 0;
         }
+    }
+
+    .motto-juntese{
+        color: $cor1;
+        h4{
+            font-size: 70px;
+            font-family: $fonte2;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            padding: 0;
+            line-height: 1.2rem;
+            @media (max-width: $mobile){
+                font-size: 60px;
+            }
+        }
+        p{
+            
+            font-family: $fonte1;
+            font-size: 35px;
+            font-family: $fonte1;
+            @media (max-width: $mobile){
+                font-size: 25px;
+            }
+        }
+
     }
 
     .novidades-container{

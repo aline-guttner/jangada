@@ -42,7 +42,7 @@ h1 {
   padding: 0 30px;
 }
 .intro .img-desktop {
-    height: 230px;
+  height: 230px;
   display: block;
 }
 .intro .img-mobile {
@@ -85,6 +85,32 @@ h1 {
   text-align: center;
   font-family: "Bebas Neue Regular", sans-serif;
   margin-bottom: 0;
+}
+.intro .motto-juntese {
+  color: white;
+}
+.intro .motto-juntese h4 {
+  font-size: 70px;
+  font-family: "Return of the Gunfighter", sans-serif;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  padding: 0;
+  line-height: 1.2rem;
+}
+@media (max-width: 768px) {
+  .intro .motto-juntese h4 {
+    font-size: 60px;
+  }
+}
+.intro .motto-juntese p {
+  font-family: "Bebas Neue Regular", sans-serif;
+  font-size: 35px;
+  font-family: "Bebas Neue Regular", sans-serif;
+}
+@media (max-width: 768px) {
+  .intro .motto-juntese p {
+    font-size: 25px;
+  }
 }
 .intro .novidades-container {
   width: 100%;
